@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:fontFamily="@font/suite_right"
+        android:id="@+id/textid"
+        android:textSize="20sp"
+        android:text="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="@font/suite_right"
+        android:id="@+id/textusername"
+        android:textSize="20sp"
+        android:text="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="@font/suite_right"
+        android:id="@+id/textpassword"
+        android:textSize="20sp"
+        android:text="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="@font/suite_right"
+        android:id="@+id/textemail"
+        android:textSize="20sp"
+        android:text="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="@font/suite_right"
+        android:id="@+id/textrole"
+        android:textSize="20sp"
+        android:text="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="@font/suite_right"
+        android:id="@+id/textupdateAt"
+        android:textSize="20sp"
+        android:text="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:fontFamily="@font/suite_right"
+        android:id="@+id/textcreateAt"
+        android:textSize="20sp"
+        android:text="text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

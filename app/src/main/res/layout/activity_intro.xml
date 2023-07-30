@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.intro.IntroActivity"
+
+    >
+
+
+    <TextView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center|top"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/ibm"
+        android:gravity="center"
+        android:text="Login"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+android:text="EasySport Club"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ibm"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/logo">
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:fontFamily="@font/ibm"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+
+            />
+
+        <EditText
+            android:background="@drawable/round_button5"
+            android:paddingLeft="7.5dp"
+            android:id="@+id/emailArea"
+            style="@style/AuthEditText"
+            android:layout_width="340dp"
+            android:layout_height="47dp"
+            android:fontFamily="@font/ibm"
+            android:hint="email" />
+
+        <TextView
+            android:layout_marginLeft="3dp"
+            android:fontFamily="@font/ibm"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+
+            />
+
+
+        <EditText
+            android:id="@+id/passwordArea"
+            style="@style/AuthEditText"
+            android:layout_width="340dp"
+            android:layout_height="50dp"
+            android:hint="password"
+            android:fontFamily="@font/ibm"
+            android:inputType="textPassword"
+            android:background="@drawable/round_button5"
+            android:paddingLeft="7.5dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="310dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round_button6"
+        android:drawableLeft="@drawable/pepol"
+        android:fontFamily="@font/ibm"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text=" 로그인"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.693"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ibm"
+        android:text="비밀번호 찾기"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
+
+    <TextView
+        android:id="@+id/sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ibm"
+        android:text="회원가입"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_near"
+        android:icon="@drawable/baseline_near_me_24"
+        android:title="주변 정보"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_board"
+        android:icon="@drawable/baseline_comment_24"
+        android:title="게시판"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_weather"
+        android:icon="@drawable/baseline_wb_sunny_24"
+        android:title="날씨"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_my_profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="내 정보"
+        app:showAsAction="always" />
+</menu>
