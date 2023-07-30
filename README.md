@@ -1,2 +1,2 @@
 # EasySportClub
-협업 프로젝트(Spring,AndroidStudio_Kotlin)
+운동시설 예약 플랫폼 
