@@ -240,7 +240,8 @@ class PostViewerActivity : AppCompatActivity() {
             return oldItem.title == newItem.title &&
                     oldItem.content == newItem.content &&
                     oldItem.commentSize == newItem.commentSize &&
-                    oldItem.user.username == newItem.user.username
+                    oldItem.user.username == newItem.user.username &&
+                    oldItem.user.nickname == newItem.user.nickname
         }
     }) {
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostItemViewHolder {
@@ -253,7 +254,7 @@ class PostViewerActivity : AppCompatActivity() {
             val post = currentList[position]
 
             with(holder.binding) {
-                nameTextView.text = post.user.username
+                nameTextView.text = post.user.nickname
                 datetimeTextView.text = post.createdAt
                 datetimeTextView.isVisible = datetimeTextView.text.toString().isNotBlank()
 
@@ -275,7 +276,8 @@ class PostViewerActivity : AppCompatActivity() {
 
         override fun areContentsTheSame(oldItem: Comment, newItem: Comment): Boolean {
             return oldItem.content == newItem.content &&
-                    oldItem.user.username == newItem.user.username
+                    oldItem.user.username == newItem.user.username &&
+                    oldItem.user.nickname == newItem.user.nickname
         }
     }) {
         var onEditButtonClicked: ((Comment) -> Unit)? = null
@@ -291,7 +293,7 @@ class PostViewerActivity : AppCompatActivity() {
             val comment = currentList[position]
 
             with(holder.binding) {
-                nameTextView.text = comment.user.username
+                nameTextView.text = comment.user.nickname
                 datetimeTextView.text = comment.createdAt
                 datetimeTextView.isVisible = datetimeTextView.text.toString().isNotBlank()
 

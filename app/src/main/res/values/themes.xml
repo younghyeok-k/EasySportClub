@@ -11,7 +11,7 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">#FFFFFF</item>
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/suite_bold</item>
     </style>
@@ -38,6 +38,11 @@
 
     <style name="Widget.Button.Reservation" parent="Theme.Test">
         <item name="colorPrimary">#0c6efc</item>
+        <item name="colorOnPrimary">#ffffff</item>
+    </style>
+
+    <style name="Widget.Button.headcount" parent="Theme.Test">
+        <item name="colorPrimary">#3F51B5</item>
         <item name="colorOnPrimary">#ffffff</item>
     </style>
 </resources>

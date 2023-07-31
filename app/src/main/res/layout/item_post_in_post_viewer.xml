@@ -26,7 +26,7 @@
             <ImageView
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:src="@drawable/people" />
+                android:src="@drawable/user" />
 
         </com.google.android.material.card.MaterialCardView>
 

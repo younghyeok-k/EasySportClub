@@ -3,6 +3,7 @@ package com.example.test.ui.main.children
 import android.app.Activity
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -164,7 +165,9 @@ class PostFragment : Fragment() {
                 return oldItem.title == newItem.title &&
                         oldItem.content == newItem.content &&
                         oldItem.commentSize == newItem.commentSize &&
-                        oldItem.user.username == newItem.user.username
+                        oldItem.user.username == newItem.user.username &&
+                        oldItem.user.nickname == newItem.user.nickname
+
             }
         }) {
         var onItemClickListener: ((Post) -> Unit)? = null
@@ -186,7 +189,7 @@ class PostFragment : Fragment() {
                 titleTextView.text = post.title
                 contentTextView.text = post.content
                 commentCountTextView.text = "${post.commentSize}"
-
+Log.d("사이즈 ","${post.commentSize} 개")
                 if (post.commentSize > 0) {
                     commentCountTextView.isVisible = true
                     verticalDivider1.isVisible = true
@@ -203,7 +206,7 @@ class PostFragment : Fragment() {
                     verticalDivider2.isVisible = false
                 }
 
-                nameTextView.text = post.user.username
+                nameTextView.text = post.user.nickname
             }
         }
 

@@ -2,6 +2,7 @@ package com.example.test.ui.main.children
 
 import android.R
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.map
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.test.adapter.SportViewPagerAdapter
@@ -25,8 +27,10 @@ import com.naver.maps.map.CameraUpdate
 import com.naver.maps.map.LocationTrackingMode
 import com.naver.maps.map.NaverMap
 import com.naver.maps.map.OnMapReadyCallback
+import com.naver.maps.map.overlay.Marker
 import com.naver.maps.map.overlay.Overlay
 import com.naver.maps.map.util.FusedLocationSource
+import com.naver.maps.map.util.MarkerIcons
 
 
 private const val LOCATION_PERMISSION_REQUEST_CODE = 1000
@@ -96,8 +100,13 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
                             }
 
 
+
+
                         if (cameraUpdate != null) {
                             naverMap.moveCamera(cameraUpdate)
+
+
+
                         }
                     }
                 })
@@ -146,6 +155,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback, Overlay.OnClickListener {
             }
         }
     }
+
 
     override fun onMapReady(map: NaverMap) {
         with(map) {

@@ -90,6 +90,43 @@
                 android:drawablePadding="8dp"
                 android:textAppearance="?attr/textAppearanceBody2"
                 tools:text="@tools:sample/lorem" />
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+            >
+
+                <TextView
+                    android:drawablePadding="8dp"
+                    android:id="@+id/textView5"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm"
+                    android:drawableLeft="@drawable/baseline_check_18"
+                    android:text="날짜 선택: "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/datee"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ibm"
+                    android:text="06월 08일(목요일)"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:id="@+id/date_picker_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                   android:src="@drawable/ic_baseline_edit_calendar_24"
+                 />
+
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -97,9 +134,60 @@
                 android:layout_marginTop="16dp"
                 android:drawableLeft="@drawable/baseline_check_18"
                 android:drawablePadding="8dp"
-                android:text="예약 시간"
+                android:text="인원 수 "
+
                 android:textAppearance="?attr/textAppearanceBody2" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:id="@+id/decrementButton"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:layout_marginLeft="7dp"
+                    android:textSize="10sp"
+                    android:theme="@style/Widget.Button.headcount" />
+                <TextView
+                    android:id="@+id/head_count"
+                    android:layout_width="50dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textSize="15sp"
+                    tools:text="숫자" />
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:id="@+id/incrementButton"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="10sp"
+                    android:layout_marginRight="7dp"
+                    android:theme="@style/Widget.Button.headcount" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:drawableLeft="@drawable/baseline_check_18"
+                android:drawablePadding="8dp"
+                android:text="예약 시간 "
+
+                android:textAppearance="?attr/textAppearanceBody2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:drawablePadding="8dp"
+                android:text="09:00 ~ 10:00 1시간 예약을 희망할 경우 09:00과 09:30분 클릭 "
+                android:textSize="10sp"
+                android:textAppearance="?attr/textAppearanceBody2" />
             <com.nex3z.flowlayout.FlowLayout
                 android:id="@+id/flow_layout"
                 android:layout_width="match_parent"

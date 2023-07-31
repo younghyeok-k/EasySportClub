@@ -10,6 +10,6 @@ data class Post(
     val title: String = "",
     val content: String = "",
     val createdAt: String? = null,
-    val commentSize: Int = 0,
+    val commentSize: Long = 0,
     val user: User = User(),
 ) : Parcelable

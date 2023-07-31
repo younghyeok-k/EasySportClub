@@ -1,5 +1,7 @@
 package com.example.test.ui.main.children
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.test.api.PostApi
@@ -21,6 +23,7 @@ class PostViewModel : ViewModel() {
     private val query = MutableStateFlow("")
     val posts = MutableStateFlow<List<Post>>(listOf())
 
+
     private var page = 0;
     var isLast = false
         private set
@@ -28,7 +31,7 @@ class PostViewModel : ViewModel() {
 
     init {
         viewModelScope.launch {
-            query.debounce(200).collectLatest {
+            query.debounce(100).collectLatest {
                 page = 0
                 isLast = false
                 loadMore()
@@ -59,7 +62,15 @@ class PostViewModel : ViewModel() {
                         call: Call<PostsResponse>,
                         response: Response<PostsResponse>
                     ) {
+//                        if (response.isSuccessful && response.body() != null) {
+//                            // Process the response
+//                            it.resumeWith(Result.success(response.body()!!))
+//                        } else {
+//                            // Handle unsuccessful response
+//                        }
+
                         it.resumeWith(Result.success(response.body()!!))
+
                     }
 
                     override fun onFailure(call: Call<PostsResponse>, t: Throwable) {

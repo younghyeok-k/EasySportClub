@@ -58,5 +58,7 @@ class HomeViewModel : ViewModel() {
                 t.printStackTrace()
             }
         })
+
     }
+
 }

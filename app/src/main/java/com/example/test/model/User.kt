@@ -14,4 +14,5 @@ data class User(
     val createdAt: String? = null,
     val provider: String? = null,
     val providerId: String? = null,
+    val nickname: String? = null
 ) : Parcelable

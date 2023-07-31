@@ -35,7 +35,7 @@
                 <ImageView
                     android:layout_width="72dp"
                     android:layout_height="72dp"
-                    android:src="@drawable/people" />
+                    android:src="@drawable/user" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -71,7 +71,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
-                android:drawableRight="@drawable/baseline_keyboard_arrow_right_24"
                 android:padding="16dp"
                 android:text="커뮤니티"
                 android:textAppearance="?attr/textAppearanceSubtitle1"

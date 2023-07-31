@@ -13,6 +13,7 @@ data class Userinfo(
     @SerializedName("updateAt") var updateAt: String? = null,
     @SerializedName("createdAt") var createdAt: String? = null,
     @SerializedName("provider") var provider: String? = null,
-    @SerializedName("providerId") var providerId: String? = null
+    @SerializedName("providerId") var providerId: String? = null,
+    @SerializedName("nickname") var nickname: String? = null
 
 )

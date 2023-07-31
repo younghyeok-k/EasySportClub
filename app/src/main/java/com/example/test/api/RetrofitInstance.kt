@@ -21,17 +21,17 @@ object RetrofitInstance {
     //192.168.45.212
     //192.168.12.249
     //172.21.7.211
-    //private val BASE_URL = "http://172.21.7.211:8080/" // gnu
-    private val BASE_URL = "http://13.209.68.172" // gnu
+//    private val BASE_URL = "http://13.125.250.57/" // gnu
+    private val BASE_URL = "http://13.125.250.57" // gnu
 
     private val interceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BASIC
     }
 
     private val okHttpClient = OkHttpClient.Builder()
-        .connectTimeout(2, TimeUnit.MINUTES)
-        .readTimeout(2, TimeUnit.MINUTES)
-        .writeTimeout(2, TimeUnit.MINUTES)
+        .connectTimeout(5, TimeUnit.MINUTES)
+        .readTimeout(5, TimeUnit.MINUTES)
+        .writeTimeout(5, TimeUnit.MINUTES)
         .addInterceptor(interceptor)
         .addInterceptor(TokenInterceptor()) // Bearer 토큰 추출 및 요청 헤더에 추가
         .addInterceptor(BearerTokenInterceptor())

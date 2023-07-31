@@ -1,5 +1,6 @@
 package com.example.test.dialog
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.example.Content
@@ -21,31 +22,31 @@ import kotlin.coroutines.suspendCoroutine
 
 class ReservationViewModel : ViewModel() {
     private val apiService = RetrofitInstance.retrofit.create(ReservationApi::class.java)
-    val reservationStatus = MutableSharedFlow<CenterReservationStatusResponse>()
-
-    fun fetch(content: Content) {
+    val _reservationStatus = MutableSharedFlow<CenterReservationStatusResponse>()
+    val reservationStatus: MutableSharedFlow<CenterReservationStatusResponse> get() = _reservationStatus
+    fun fetch(content: Content,Rdate:String) {
         viewModelScope.launch {
-            while (true) {
-                try {
-                    val status = getReservationStatus(content)
-                    if (status != null) {
-                        reservationStatus.emit(status)
-                    }
-                } catch (_: Exception) {
+//            while (true) {
+            try {
+                val status = getReservationStatus(content,Rdate)
+                if (status != null) {
+                    _reservationStatus.emit(status)
                 }
-
-                delay(1000)
+            } catch (_: Exception) {
             }
+
+            delay(1000)
+//            }
         }
     }
 
-    private suspend fun getReservationStatus(content: Content): CenterReservationStatusResponse? {
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.US)
+    private suspend fun getReservationStatus(content: Content,Rdate:String): CenterReservationStatusResponse? {
+//        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.US)
 
         return suspendCoroutine {
             apiService.getCenterReservation(
                 content.centerId!!.toString(),
-                dateFormat.format(Date())
+                Rdate
             )
                 .enqueue(object : Callback<CenterReservationStatusResponse> {
                     override fun onResponse(
@@ -68,12 +69,13 @@ class ReservationViewModel : ViewModel() {
     suspend fun reservation(
         content: Content,
         date: String,
-        times: List<String>
+        times: List<String>,
+        headcount:String
     ): ResponseReservation? {
         val request = RequestReservation().apply {
             reservingDate = date
             reservingTimes = times
-            headCount = "1"
+            headCount = headcount
         }
 
         val result = suspendCoroutine {
