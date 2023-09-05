@@ -21,7 +21,7 @@
 | ------------ | ------------- |------------- |------------- |
 | ![Screenshot_20230814-203532_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/2abb3f12-56d4-4c2b-a200-11c2c6bdd4a8)| ![Screenshot_20230814-203521_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/9de93186-d728-45dc-8a43-16ba32b0f396) |![Screenshot_20230814-203547_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/8020bb67-6c7d-4b95-b7bb-574dfaceee22)| ![Screenshot_20230814-203604_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/33b4a90d-902a-4f62-9f44-ead9e8f13f78) |
 
-### 주변정보,게시판,날씨,내정보
+### 주변정보,게시판,날씨,내 정보
 | 주변정보 | 게시판 | 날씨 | 내정보 |
 | ------------ | ------------- |------------- |------------- |
 | ![Screenshot_20230814-203607_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/247867cb-4f0b-416a-ba39-18b7bd9a7908)| ![Screenshot_20230814-203614_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/0a91e2ff-12fe-4c18-bcb4-6a86edc1b7a8)|![Screenshot_20230814-203618_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/893fcd2c-7fc6-4488-9bc4-21f19ba52858)| ![Screenshot_20230814-203621_test](https://github.com/GNU-SPORTS/SPORTS-CLIENT-APP/assets/97229292/f8701548-ac26-4518-8479-7989995e8a0a)|
