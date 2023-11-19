@@ -16,6 +16,7 @@
 `MVVM`
 
 ## 👐 Result
+![image](https://github.com/younghyeok-k/EasySportClub/assets/97229292/7a83a6da-5521-4c11-9d0b-40864576d499.gif)
 
 ### 로고,로그인,예약 홈,예약 화면
 | 로고 | 로그인 | 예약 홈 | 예약 화면 |
